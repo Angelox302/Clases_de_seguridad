@@ -43,7 +43,9 @@ if (isset($_GET['timeout']) && $_GET['timeout'] == 1) {
             </label>
             <input type="password" name="password"
             placeholder="Contraseña" id="password" required maxlength="8">
-            
+
+             <button type="button" id="btn_toggle" onclick="togglePassword()">👀</button>
+
             <div id="password-validation" class="validation-container">
                 <p>Requisitos de la contraseña:</p>
                 <ul class="req-list">
@@ -120,6 +122,19 @@ if (isset($_GET['timeout']) && $_GET['timeout'] == 1) {
                 }
             });
         });
-    </script>
+
+function togglePassword() {
+    const input = document.getElementById("password");
+    const btn = document.getElementById("btn_toggle");
+
+    if (input.type === "password") {
+        input.type = "text";
+        btn.textContent = "🔒";
+    } else {
+        input.type = "password";
+        btn.textContent = "👀";
+    }
+}
+</script>
 </body>
 </html>
