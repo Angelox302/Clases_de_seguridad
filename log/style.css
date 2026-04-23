@@ -44,6 +44,7 @@ body {
     margin-bottom: 20px;
     padding: 0 15px;
 }
+
 .login form input[type="submit"] {
     width: 100%;
     padding: 15px;
@@ -56,11 +57,32 @@ body {
     transition: background-color 0.2s;
      border-radius: 0px 0px 10px 10px;
 }
-.login form input[type="submit"]:hover {
-  background-color: rgb(86, 86, 248);
-    transition: background-color 0.2s;
+.login form input[type="password"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 45px 0 15px; 
+}
+#btn_toggle {
+    background: none;
+    border: none;
+    width: 45px;
+    height: 50px;
+    margin-left: -45px; /* Lo mete dentro del input */
+    margin-bottom: 20px; /* Alineado con el margen del input */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    outline: none;
+    z-index: 10;
 }
 
+#btn_toggle:active {
+    transform: scale(0.9);
+}
 .validation-container {
     width: 310px;
     margin: 0 auto 20px auto;
